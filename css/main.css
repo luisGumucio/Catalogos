@@ -1,0 +1,23 @@
+/*********************
+SLIDER
+*********************/
+
+.flexslider{
+	max-width: 810px;
+	max-height: 340px;
+}
+
+label{
+	font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+	font-size: 15px;
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 50px;
+    text-align: right;
+    margin-right: 30px;
+}
+input {
+  display: inline-block;
+  float: left;
+}
