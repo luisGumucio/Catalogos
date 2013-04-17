@@ -1,0 +1,53 @@
+/*********************
+CSS PRUEBA
+*********************/
+
+html *
+{
+   font-size: 1em;
+   color: #000;
+   font-family: Helvetica !important;
+}
+
+.menu{
+	width: 1000px;
+	height: 110px;
+	background-color: #f2e4c2;
+	margin: auto;
+	margin-top: 0 !important;
+}
+
+.logo{
+	font-size: 2em;
+	margin-left: 20px;
+	padding-top: 10px;
+}
+
+.linea {
+	margin-top: 10px;
+    border:1px solid black;
+}
+
+ul#list-nav {
+  list-style:none;
+  margin:20px;
+  padding:0;
+  width:675px
+}
+
+ul#list-nav li {
+  display:inline
+}
+
+ul#list-nav li a {
+  text-decoration:none;
+  padding:5px 0;
+  width:130px;
+  float:left;
+  text-align:center;
+  border-left:1px solid #1807b6;
+}
+
+ul#list-nav li a:hover {
+  color:#839349;
+}
