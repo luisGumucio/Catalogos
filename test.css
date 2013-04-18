@@ -18,34 +18,69 @@ html *
 	margin-top: -10px !important;
 }
 
+.header{
+	width:auto;
+	height:auto;
+	background-color: #FFF9F1;
+}
+
 .menu{
+	overflow: auto;
 	width: 1000px;
 	height: 50px;
-	background-color: #FFF9F1;
 	margin: auto;
 	margin-top: 0 !important;
 	float: none;
+	border-top: 3px solid #CBCBCB;
 }
 
 .logo{
 	font-size: 2em;
 	margin-left: 20px;
-	padding-top: 10px;
+	padding-top: 30px;
 	color: #595959;
-	width:180px;
+	width:200px;
 	float:left;
 }
 
 .login{
-	background: red;
-	height: 50px;
-	width: 800px;
-	float: left;	
+	height: 100px;
+	width: 780px;
+	float: left;
+	text-align: right;	
+}
+
+#carrito{
+	margin-left: 450px;
+	height:25px;
+	width: 250px;
+	background: #FB3C8B;
+	border: 2px solid #CBCBCB;
+	padding-top: 5px;
+	text-align: center;
+}
+
+#carrito a{
+	color: #FFF;
+	text-decoration: none;
 }
 
 .linea {
-	margin-top: 10px;
     border:1px solid #CBCBCB;
+    overflow: auto;
+}
+
+ul#login{
+	margin:20px;
+}
+
+ul#login li{
+	display: inline;
+}
+
+ul#login li a{
+	text-decoration: none;
+	margin-left:120px;
 }
 
 ul#list-nav {
@@ -110,6 +145,15 @@ ul#submenu li a {
   float:left;
   text-align:center;
   border-left:3px solid #FFF;
+}
+
+.activo{
+	font-weight: bold;
+}
+
+.activo2{
+	font-weight: bold;
+	background: #919191;
 }
 
 ul#submenu li a:hover {
