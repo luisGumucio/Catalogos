@@ -9,23 +9,43 @@ html *
    font-family: Helvetica !important;
 }
 
+.cascaron{
+	width:1000px;
+	height:auto;
+	margin: auto;
+	border-left: 5px solid #CBCBCB;
+	border-right: 5px solid #CBCBCB;
+	margin-top: -10px !important;
+}
+
 .menu{
 	width: 1000px;
-	height: 110px;
-	background-color: #f2e4c2;
+	height: 50px;
+	background-color: #FFF9F1;
 	margin: auto;
 	margin-top: 0 !important;
+	float: none;
 }
 
 .logo{
 	font-size: 2em;
 	margin-left: 20px;
 	padding-top: 10px;
+	color: #595959;
+	width:180px;
+	float:left;
+}
+
+.login{
+	background: red;
+	height: 50px;
+	width: 800px;
+	float: left;	
 }
 
 .linea {
 	margin-top: 10px;
-    border:1px solid black;
+    border:1px solid #CBCBCB;
 }
 
 ul#list-nav {
@@ -41,13 +61,69 @@ ul#list-nav li {
 
 ul#list-nav li a {
   text-decoration:none;
+  font-size:.8em;
   padding:5px 0;
   width:130px;
   float:left;
   text-align:center;
   border-left:1px solid #1807b6;
+  text-transform: uppercase;
 }
 
 ul#list-nav li a:hover {
   color:#839349;
+}
+
+.contenido{
+	width: 1000px;
+	height: 500px;
+	background-color: #FFF9F1;
+	margin: auto;
+	margin-top: 30px;	
+}
+
+.barraSubmenu{
+	padding-top:1px;
+	width: auto;
+	height: 75px;
+}
+
+ul#submenu {
+  list-style:none;
+  margin:20px;
+  padding:0;
+  width:675px
+}
+
+ul#submenu li {
+  display:inline
+}
+
+ul#submenu li a {
+  text-decoration:none;
+  text-transform: uppercase;
+  font-size: .8em;
+  color: #000;
+  background-color: #CBCBCB;
+  padding:5px 0;
+  width:130px;
+  float:left;
+  text-align:center;
+  border-left:3px solid #FFF;
+}
+
+ul#submenu li a:hover {
+  color:#FFF;
+  background: #919191;
+}
+
+.flexslider{
+	width:750px;
+	margin: auto !important;
+}
+
+.slider{
+	width:960px;
+	margin: auto;
+	background: #CBCBCB;
 }

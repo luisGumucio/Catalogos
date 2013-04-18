@@ -6,24 +6,73 @@
 		
 		<!-- CSS -->
 		<link href="test.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/flexslider.css" type="text/css">
+		
+		<!-- JS -->
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery.flexslider.js"></script>
+		
+		<script type="text/javascript" charset="utf-8">
+			$(window).load(function() {
+			    $('.flexslider').flexslider({
+			          animation: "slide",
+			          controlsContainer: ".flex-container"
+			    });
+			});
+		</script>
+
 		
 	</head>
 	<body>
-		<div class="menu">
-			<div class="logo">
-				<a> Por Catalogo</a>
+		<div class="cascaron">
+			<div class="header">
+				<div class="logo">
+					<a> Por Catalogo</a>
+				</div>
+				
+				<div class="login">
+					Log-in
+				</div>
+				
+				<div class="linea">
+				</div>
+				
+				<div class="menu">
+					<ul id="list-nav">
+						<li><a href="#">Catalogos</a></li>
+						<li><a href="#">Contacto</a></li>
+						<li><a href="#">Nosotros</a></li>
+						<li><a href="#">Compra Segura</a></li>
+						<li><a href="#">Ayuda</a></li>
+					</ul>
+				</div>
 			</div>
 			
-			<div class="linea">
+			<div class="contenido">
+				<div class="barraSubmenu">
+					<ul id="submenu">
+						<li><a href="#">Sobresalientes</a></li>
+						<li><a href="#">Genero</a></li>
+						<li><a href="#">Categorias</a></li>
+						<li><a href="#">Marcas</a></li>
+						<li><a href="#">Promociones</a></li>
+					</ul>
+				</div>
+				
+				<div class="slider">
+					<div class="flexslider">
+						<ul class="slides">
+					    	<li><img src="img/catalogo1.png" /></li>
+					    	<li><img src="img/catalogo2.png" /></li>
+					    	<li><img src="img/catalogo3.png" /></li>
+					    </ul>
+				    </div>
+				</div>
+				
 			</div>
 			
-			<ul id="list-nav">
-				<li><a href="#">Catalogos</a></li>
-				<li><a href="#">Contacto</a></li>
-				<li><a href="#">Nosotros</a></li>
-				<li><a href="#">Compra Segura</a></li>
-				<li><a href="#">Ayuda</a></li>
-			</ul>
+				
+			
 		</div>
 	</body>
 </html>
