@@ -38,7 +38,7 @@ html *
 	font-size: 2em;
 	margin-left: 20px;
 	padding-top: 30px;
-	color: #595959;
+	color: #818180;
 	width:200px;
 	float:left;
 }
@@ -101,12 +101,13 @@ ul#list-nav li a {
   width:130px;
   float:left;
   text-align:center;
-  border-left:1px solid #1807b6;
+  border-left:1px solid #1E09DF;
   text-transform: uppercase;
+  color: #7EB526;
 }
 
 ul#list-nav li a:hover {
-  color:#839349;
+  color:#528305;
 }
 
 .contenido{
@@ -145,13 +146,22 @@ ul#submenu li a {
   float:left;
   text-align:center;
   border-left:3px solid #FFF;
+  border-top: 3px solid #FFF;
+  border-bottom: 3px solid #FFF;
+  color: #FFF;
 }
 
 .activo{
 	font-weight: bold;
+	color:#528305;
 }
 
 .activo2{
+	font-weight: bold;
+	background: #919191;
+}
+
+.activo3{
 	font-weight: bold;
 	background: #919191;
 }
@@ -170,4 +180,52 @@ ul#submenu li a:hover {
 	width:960px;
 	margin: auto;
 	background: #CBCBCB;
+}
+
+.subSubmenu{
+	padding-top:1px;
+	width: auto;
+	height: auto;
+	float: left;
+}
+ul#submenu2 {
+  list-style:none;
+  margin:20px;
+  padding:0;
+  width: 140px;
+  height: auto;
+}
+
+
+ul#submenu2 li a {
+  text-decoration:none;
+  text-transform: uppercase;
+  font-size: .8em;
+  color: #000;
+  background-color: #92948F;
+  padding:5px 0;
+  width:130px;
+  float:left;
+  text-align:center;
+  border-left:3px solid #D8F4D1;
+  border-top: 2px solid #D8F4D1;
+  border-bottom: 1.5px solid #D8F4D1;
+  border-right: 3px solid #D8F4D1;
+  color: #FFF;
+}
+
+ul#submenu2 li a:hover {
+  font-weight: bold;
+  color:#FFF;
+  background: #5C5D5C;
+}
+
+.fotoMarcas{
+	width: 500px;
+}
+
+.span4{
+	margin-top: 50px;
+	float:left;
+	margin-left:20px;
 }
