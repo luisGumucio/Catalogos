@@ -173,48 +173,61 @@
             <?php
               }
             ?>
-            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-              <fieldset>
-                <legend>Datos de la pagina</legend>
-                <br>
-
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="form-horizontal">
+            <legend>Datos de la pagina</legend>
+              <div class="control-group">
+                <label >Email</label>
+                <div>
+                  <input type="text" id="inputEmail" placeholder="Email">
+                </div>
+              </div>
+              <div class="control-group">
                 <label>Codigo:</label>
-                  <input type="text" name="codigo" placeholder="Codigo">
-
-                <label>Descripcion Corta:
-                  <textarea rows="5" name="descripcionCorta" placeholder="Descripcion corta"></textarea>
+                <div>
+                  <input class="input-medium" type="text" placeholder="Codigo">
+                </div>
+              </div>
+              <div class="control-group">
+                <label>Descripcion Corta:</label>
+                <div class="controls">
+                  <textarea rows="5" placeholder="Descripcion corta"></textarea>
+                </div>
+              </div>
+              <div class="control-group">
+                <label>Descripcion larga:</label>
+                <div class="controls">
+                  <textarea rows="5" placeholder="Descripcion larga"></textarea>
+                </div>
+              </div>
+              <div class="control-group">
+                <label>Precio:</label>
+                <div class="input-prepend input-append">
+                  <span class="add-on">$</span>
+                  <input class="span5" type="text">
+                </div>
+              </div>
+              <label>Precio regular:</label>
+              <div class="control-group">
+                <div class="input-prepend input-append">
+                  <span class="add-on">$</span>
+                  <input class="span4" type="text">
+                </div>
+              </div>
+              <div class="control-group">
+                <label> Promocion:</label>
+                <br>
+                <label class="radio">Si
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
                 </label>
-                <label>Descripcion larga:
-                  <textarea rows="5" name="descripcionLarga" placeholder="Descripcion larga"></textarea>
-                </label>
-                <label>Precio:
-                   <div class="input-prepend input-append">
-                    <span class="add-on">$</span>
-                    <input name="precio" class="span5" type="text">
-                  </div>
-                </label>
-                <label>
-                  <p>Precio regular:</p>
-                  <div class="input-prepend input-append">
-                    <span class="add-on">$</span>
-                    <input name="precioRegular" class="span5" type="text">
-                  </div>
-                </label>
-                <label> Promocion:
-                  <br>
-                  <label class="radio">Si
-                    <input type="radio" name="tienePromocion" id="optionsRadios1" value="1">
-                  </label>
-                  <label class="radio">No
-                    <input type="radio" name="tienePromocion" id="optionsRadios2" value="0">
-                  </label>
-                </label>
-              </fieldset>
-              <div class="form-actions">
-                <button type="submit" name="submit" class="btn btn-primary">Guardar</button>
+                <label class="radio">No
+                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                </div>
+              </label>
+              <div class="form-inline">
+                <button type="submit" class="btn btn-primary">Guardar</button>
                 <button type="button" class="btn">Guardar y Nuevo</button>
                 <button type="button" class="btn">Limpiar</button>
-              </div>
+              </form>
             </form>
           </div><!--/span-->
         </div><!--/row-->
