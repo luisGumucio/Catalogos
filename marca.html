@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Por Catalogo | Inicio</title>
+    <title>BlaBla | Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="OchoNueve">
@@ -15,7 +15,6 @@
     
     <!-- Slider -->
     <link rel="stylesheet" href="css/flexslider.css" type="text/css">
-     
     
     <style>
       body {
@@ -45,7 +44,8 @@
     <script src="js/bootstrap-typeahead.js"></script>
     <script src="js/jquery.fittext.js"></script>
     <script src="js/jquery.flexslider.js"></script>
-    
+    <script src="js/jquery.lightbox-0.5.js"></script>
+        
     <script type="text/javascript" charset="utf-8">
 		$(window).load(function() {
 		    $('.flexslider').flexslider({
@@ -67,11 +67,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand">Por Catalogo</a>
+          <a class="brand">BlaBla</a>
           <div class="nav-collapse">
           	<ul class="nav">
           		<li class="active"><a href="#">Inicio</a></li>
-          		<li><a href="catalogo.html"><span class="white">Catalogos</span></a></li>
+          		<li><a href="#"><span class="white">Catalogos</span></a></li>
           		<li><a href="#"><span class="white">Contacto</span></a></li>
           	</ul>
             <ul class="nav pull-right">
@@ -82,26 +82,46 @@
         </div> <!-- end container -->
       </div> <!-- end navbar-inner -->
     </div> <!-- end navbar -->
-    
-    </div>
 
-    <div class="container">
-	
-		<div class="hero-unit">
-			<h2><center>Sobresalientes</center></h2>			
-			<br />
-			
-			<div class="flexslider" style="margin: auto; margin-bottom: 40px">
-				<ul class="slides">
-			    	<li><img src="img/catalogo1.png" /></li>
-			    	<li><img src="img/catalogo2.png" /></li>
-			    	<li><img src="img/catalogo3.png" /></li>
-			    </ul>
-			</div>
-		</div>
-    
     <div class="container">  
-
+    	<div class="row">
+	    <div class="span12">
+			<ul id="submenu">
+						<li><a href="catalogo.html">Genero</a></li>
+						<li><a href="categorias.html">Categorias</a></li>
+						<li><a href="marca.html">Marcas</a></li>
+						<li><a href="promociones.html">Promociones</a></li>
+					</ul>
+		</div>
+    	</div>
+				
+		<div class="row">
+			<div class="span2">
+				<ul id="submenu2">
+					<li><a href="#">Andrea</a></li>
+					<li><a href="#">Arantza</a></li>
+					<li><a href="#">Betterware</a></li>
+					<li><a href="#">Cyzone</a></li>
+					<li><a href="#">Esika</a></li>
+					<li><a href="#">Jafra</a></li>
+					<li><a href="#">Mark</a></li>
+					<li><a href="#">Mary Kay</a></li>
+					<li><a href="#">Parklane</a></li>
+					<li><a href="#">Tupperware</a></li>
+					<li><a href="#">Vianey</a></li>
+					<li><a href="#">Wonderbra</a></li>
+				</ul>
+			</div>
+					
+			<div class="span10">
+				<div class="row-fluid">
+					<div class="span3 foto"><img src="img/guess.jpg" width="150px"/></div>
+					<div class="span3 foto"><img src="img/michael.jpg" width="150px"/></div>
+					<div class="span3 foto"><img src="img/nike.jpg" width="150px"/></div>
+				</div>
+			</div>
+	
+		</div>
     </div> <!-- /container -->
     
     <script type="text/javascript">
@@ -109,8 +129,6 @@
 		$("#fittext2").fitText(1.2);
 		$(".fittext3").fitText(1.0, { minFontSize: 30, maxFontSize: '45px' });
 	</script>
-
-
 
   </body>
 </html>

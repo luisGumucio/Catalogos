@@ -16,10 +16,6 @@
     <!-- Slider -->
     <link rel="stylesheet" href="css/flexslider.css" type="text/css">
     
-    <!-- Lightbox -->
-    <link rel="stylesheet" href="css/jquery.lightbox-0.5.css" type="text/css" media="screen"/>
-     
-    
     <style>
       body {
         padding-top: 60px; 
@@ -87,32 +83,44 @@
       </div> <!-- end navbar-inner -->
     </div> <!-- end navbar -->
 
-    <div class="container">   
-	    <br \>
-	    <h2>Bebe</h2>        
-	    	<div class="row">
-		        <div class="span4"><a href="img/bebe1.jpg"><img src="img/bebe1.jpg" alt="" class="lightbox"/></a></div>
-		        <div class="span4"><a href="img/bebe2.jpg"><img src="img/bebe2.jpg" alt="" class="lightbox"/></a></div>
-		        <div class="span4"><img src="img/bebe3.jpg"/></div>
-		        <div class="span4"><img src="img/bebe4.jpg"/></div>
-		        <div class="span4"><img src="img/bebe5.jpg"/></div>
-		        <div class="span4"><img src="img/bebe6.jpg"/></div>
-		    </div>  
-		
-		
-		
+    <div class="container">  
+    	<div class="row">
+	    <div class="span12">
+			<ul id="submenu">
+						<li><a href="genero.html">Genero</a></li>
+						<li><a href="categorias.html">Categorias</a></li>
+						<li><a href="marca.html">Marcas</a></li>
+						<li><a href="promociones.html">Promociones</a></li>
+					</ul>
+		</div>
+    	</div>
+				
+		<div class="row">
+			<div class="span2">
+				<ul id="submenu2">
+					<li><a href="#">Mujer</a></li>
+					<li><a href="#">Hombre</a></li>
+					<li><a href="#">Niños</a></li>
+					<li><a href="#">Bebés</a></li>
+					<li><a href="#">Varios</a></li>
+				</ul>
+			</div>
+					
+			<div class="span10">
+				<div class="row-fluid">
+					<div class="span3 foto"><img src="img/guess.jpg" width="150px"/></div>
+					<div class="span3 foto"><img src="img/michael.jpg" width="150px"/></div>
+					<div class="span3 foto"><img src="img/nike.jpg" width="150px"/></div>
+				</div>
+			</div>
+	
+		</div>
     </div> <!-- /container -->
     
     <script type="text/javascript">
 		$("#fittext1").fitText();
 		$("#fittext2").fitText(1.2);
 		$(".fittext3").fitText(1.0, { minFontSize: 30, maxFontSize: '45px' });
-	</script>
-
-	<script type="text/javascript">
-			$(document).ready(function(){
-				$('a').lightBox();
-			});
 	</script>
 
   </body>
