@@ -84,3 +84,12 @@ ul#submenu2 li a:hover {
 .foto{
 	margin-top: 20px;
 }
+
+.footer-bottom {
+	height: 30px;
+	line-height: 30px;
+	font-size: 10px;
+	font-family: 'HelveticaNeueLTStdBold',Arial,sans-serif;
+	text-transform: uppercase;
+	background: #000;
+}
