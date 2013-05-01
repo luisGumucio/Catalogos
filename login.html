@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>BlaBla | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="OchoNueve">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    
+    <!-- Slider -->
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css">
+     
+    
+    <style>
+      body {
+        padding-top: 60px; 
+      }
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <!-- Javascript-->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
+    
+    <script type="text/javascript" charset="utf-8">
+		$(window).load(function() {
+		    $('.flexslider').flexslider({
+		          animation: "slide",
+		          controlsContainer: ".flex-container"
+		    });
+		});
+	</script>
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <!-- #4e9000 -->
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand">BlaBla</a>
+          <div class="nav-collapse">
+          	<ul class="nav">
+          		<li><a href="index.html">Inicio</a></li>
+          		<li><a href="#"><span class="white">Catalogos</span></a></li>
+          		<li><a href="#"><span class="white">Contacto</span></a></li>
+          	</ul>
+            <ul class="nav pull-right">
+              <li><a href="#"><span class="white">Sign Up</span></a></li>
+            </ul>
+          </div><!-- end nav-collapse -->
+        </div> <!-- end container -->
+      </div> <!-- end navbar-inner -->
+    </div> <!-- end navbar -->
+    
+    <div class="container">   	
+		
+		<div class="hero-unit">
+			<h2>Login</h2>			
+			<br />
+			<form>
+				<label>Usuario: </label><input type="text" name="nombre"><br />
+				<label>Password: </label><input type="password" name="password"><br />
+				<br />
+				<br />
+				<button type="submit"><a href= "logeado.html">Login</a></button>
+			</form>
+		</div>
+
+    </div> <!-- /container -->
+    
+    <script type="text/javascript">
+		$("#fittext1").fitText();
+		$("#fittext2").fitText(1.2);
+		$(".fittext3").fitText(1.0, { minFontSize: 30, maxFontSize: '45px' });
+	</script>
+
+
+
+  </body>
+</html>
