@@ -53,6 +53,15 @@
 		          controlsContainer: ".flex-container"
 		    });
 		});
+		
+		function SomeDeleteRowFunction(btndel) {
+			if (typeof(btndel) == "object") {
+				$(btndel).closest("tr").remove();
+			} 
+			else {
+				return false;
+				}
+		}
 	</script>
 
   </head>
@@ -74,10 +83,6 @@
           		<li><a href="catalogo.html"><span class="white">Catalogos</span></a></li>
           		<li><a href="#"><span class="white">Contacto</span></a></li>
           	</ul>
-            <ul class="nav pull-right">
-              <li><a href="#"><span class="white">Login</span></a></li>
-              <li><a href="signup.html"><span class="white">Sign Up</span></a></li>
-            </ul>
           </div><!-- end nav-collapse -->
         </div> <!-- end container -->
       </div> <!-- end navbar-inner -->
@@ -104,14 +109,18 @@
 					<td>$99.99</td>
 					<td><input type="text" name="cantidad" class="cantidad"></td>
 					<td>$99.99</td>
-					<td><button type="button">Eliminar</button></td>
+					<td><input type="button" value="Eliminar" onclick="SomeDeleteRowFunction(this);"></td>
 				</tr>
 				<tr>
 					<td>iPhone 5 16GB</td>
 					<td>$399.99</td>
 					<td><input type="text" name="cantidad" class="cantidad"></td>
 					<td>$799.98</td>
-					<td><button type="button">Eliminar</button></td>
+					<td><input type="button" value="Eliminar" onclick="SomeDeleteRowFunction(this);"></td>
+				</tr>
+				<tr>
+					<td colspan="4">Total</td>
+					<td>$799.98</td>
 				</tr>
 			</table>
 			
