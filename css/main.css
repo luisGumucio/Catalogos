@@ -93,3 +93,11 @@ ul#submenu2 li a:hover {
 	text-transform: uppercase;
 	background: #000;
 }
+
+.carrito{
+	width:800px;
+}
+
+.cantidad{
+	width:60px;
+}
