@@ -36,7 +36,7 @@
 			<div class="placeholder">
 				<h3>Catálogo Nivea</h3>
 				<!-- <img src="images/aldo.jpg" alt=""> -->
-				<img id="foto" src="images/bebe4.jpg" alt="">
+				<img id="foto" src="images/bebe4.jpg" alt="" onclick="getOffsets()">
 				<div class="pagination">
 					<input class="input-mini" type="text" placeholder="5"><span><h5>/ 100</h5></span>
 				</div>
@@ -80,20 +80,26 @@
     function getOffsets(){
       img = document.getElementById("foto");
       parent = img.parentNode;
-      alert("La imagen se encuentra en la coordenada: (" + img.offsetLeft + ", " + img.offsetTop + ")");
-      alert("El mouse dio click en: (" + event.clientX + ", " + event.clientY + ")");
-      offsetX = event.clientX - img.offsetLeft;
-      offsetY = event.clientY - img.offsetTop;
+      clientX = event.clientX;
+      clientY = event.clientY;
+      imgX = img.offsetLeft+15;
+      imgY = img.offsetTop+167;
+      alert("La imagen se encuentra en la coordenada: (" + imgX + ", " + imgY + ")");
+      alert("El mouse dio click en: (" + clientX + ", " + clientY + ")");
+      offsetX = clientX - imgX;
+      offsetY = clientY - imgY;
       alert("Total: (" + offsetX + ", " + offsetY + ")");
+      offsetX+= 70;
+      offsetY+= 40;
 
       im_bar = document.createElement("img");
-      im_bar.src = "img/tag.svg";
+      im_bar.src = "images/tag.svg";
       im_bar.display = "block";
       im_bar.style.width = "1em";
       im_bar.style.height = "auto";
       im_bar.style.position = "absolute";
-      im_bar.style.top = event.clientX.toString() + "px";
-      im_bar.style.left = event.clientX.toString() + "px";
+      im_bar.style.top = offsetY.toString() + "px";
+      im_bar.style.left = offsetX.toString() + "px";
       parent.insertBefore(im_bar);
     }
   </script>

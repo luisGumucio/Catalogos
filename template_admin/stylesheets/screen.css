@@ -111,28 +111,29 @@ ul li {
   padding: 0 20px 10px 20px;
   background-color: #eee;
   height: 520px;
+  position: relative;
 }
-/* line 101, ../sass/screen.scss */
+/* line 102, ../sass/screen.scss */
 .two-thirds .placeholder img {
   height: 83%;
 }
-/* line 105, ../sass/screen.scss */
+/* line 106, ../sass/screen.scss */
 .two-thirds .placeholder .pagination {
   margin: 0;
   padding-top: 5px;
 }
-/* line 108, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 .two-thirds .placeholder .pagination h5 {
   margin: 0;
   display: inline;
   padding-left: 10px;
 }
 
-/* line 117, ../sass/screen.scss */
+/* line 118, ../sass/screen.scss */
 .one-third {
   padding-right: 20px;
 }
-/* line 119, ../sass/screen.scss */
+/* line 120, ../sass/screen.scss */
 .one-third .btn {
   margin-top: 10px;
 }
