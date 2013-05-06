@@ -3,7 +3,6 @@
 
   if(isset($_POST['submit'])){
     // Create connection
-  	echo "hola";
     $con=mysqli_connect("localhost","root","root","dummy");
 
     // Check connection
@@ -17,11 +16,15 @@
     $precio = $_POST[precio];
     $promo = $_POST[tienePromocion];
     $precioReg = $_POST[precioRegular];
+    $tagX = $_POST[tagX];
+    $tagY = $_POST[tagY];
 
     $sql="INSERT INTO Producto (codigo, descripcionCorta, descripcionLarga, precio, tienePromocion,
     	precioRegular) VALUES ('$codigo', '$descCorta', '$descLarga', '$precio', '$promo', '$precioReg')";
 
-    if (!mysqli_query($con,$sql)){
+	$sql2="INSERT INTO ProductoTag (posX, posY) VALUES ('$tagX', '$tagY')";
+
+    if (!mysqli_query($con,$sql) || !mysqli_query($con,$sql2)){
     	$error = 1;
     }else{
     	$error = 2;
@@ -110,6 +113,8 @@
 					<label class="radio">No</label>
 					<input type="radio" name="tienePromocion" value="0">
 					<br>
+					<input type="text" id="tagX" name="tagX" class="tag">
+					<input type="text" id="tagY" name="tagY" class="tag">
 					<input type="submit" name="submit" id="button" class="btn btn-primary" value="Guardar">
 					<button class="btn" type="button">Limpiar</button>
 				</fieldset>
@@ -128,6 +133,8 @@
       alert("El mouse dio click en: (" + clientX + ", " + clientY + ")");
       offsetX = clientX - imgX;
       offsetY = clientY - imgY;
+      document.getElementById("tagX").value = offsetX;
+      document.getElementById("tagY").value = offsetY;
       alert("Total: (" + offsetX + ", " + offsetY + ")");
       offsetX+= 70;
       offsetY+= 40;
