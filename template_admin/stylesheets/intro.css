@@ -1,0 +1,89 @@
+@import url(normalize.css);
+@import url(csswizardry-grid.css);
+@import url(bootstrap.min.css);
+/* line 3, ../sass/intro.scss */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* line 8, ../sass/intro.scss */
+label {
+  display: inline;
+  padding-right: 20px;
+}
+
+/* line 13, ../sass/intro.scss */
+textarea {
+  margin-top: 10px;
+}
+
+/* line 17, ../sass/intro.scss */
+ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 20, ../sass/intro.scss */
+ul li {
+  list-style: none;
+  float: left;
+}
+
+/* line 30, ../sass/intro.scss */
+.mainbar {
+  height: 62px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding-left: 20px;
+}
+/* line 35, ../sass/intro.scss */
+.mainbar ul {
+  padding-top: 21px;
+}
+/* line 37, ../sass/intro.scss */
+.mainbar ul li {
+  padding-right: 30px;
+}
+/* line 40, ../sass/intro.scss */
+.mainbar ul li:first-child a {
+  font-size: 1.6em;
+}
+/* line 44, ../sass/intro.scss */
+.mainbar ul li a {
+  font-size: 1.4em;
+  text-transform: uppercase;
+}
+/* line 48, ../sass/intro.scss */
+.mainbar ul li:last-child {
+  padding-left: 270px;
+}
+/* line 50, ../sass/intro.scss */
+.mainbar ul li:last-child a {
+  text-transform: none;
+}
+/* line 52, ../sass/intro.scss */
+.mainbar ul li:last-child a span {
+  border-bottom: 1px dotted #000;
+}
+
+/* line 62, ../sass/intro.scss */
+.seven-eighths .placeholder {
+  background-color: #eee;
+  height: 600px;
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+/* line 69, ../sass/intro.scss */
+.seven-eighths .placeholder h2 {
+  padding-top: 30px;
+}
+/* line 73, ../sass/intro.scss */
+.seven-eighths .placeholder img {
+  width: auto;
+  height: 450px;
+  padding-top: 40px;
+}
+/* line 77, ../sass/intro.scss */
+.seven-eighths .placeholder img:nth-child(3) {
+  padding: 0 20px;
+}
