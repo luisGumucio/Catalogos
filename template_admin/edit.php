@@ -2,10 +2,12 @@
  	$error = 0;
 
 	// Create connection
-	mysql_connect("localhost","root","root")
+	// mysql_connect("localhost","root","root")
+	mysql_connect("ochonuev","ochonuev","dB147Wmwf5")
 	or die(mysql_error());
 
-	mysql_select_db("dummy") or die(mysql_error());
+	// mysql_select_db("dummy") or die(mysql_error());
+	mysql_select_db("_dummy") or die(mysql_error());
 
 	// Check connection
 	if (mysqli_connect_errno($con)){

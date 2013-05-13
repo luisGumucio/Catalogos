@@ -3,7 +3,8 @@
 
   if(isset($_POST['submit'])){
     // Create connection
-    $con=mysqli_connect("localhost","root","root","dummy");
+    // $con=mysqli_connect("localhost","root","root","dummy");
+    $con=mysqli_connect("ochonuev","ochonuev","dB147Wmwf5","_dummy");
 
     // Check connection
     if (mysqli_connect_errno($con)){
