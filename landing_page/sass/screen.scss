@@ -1,0 +1,81 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "base";
+
+@mixin ahover($param){
+	color: lighten($param, 40%);
+}
+
+body{
+	font-family: $openSans;
+}
+
+header{
+	text-align: center;
+	height: 700px;
+
+	h1{
+		font-size: 2.85em;
+	}
+
+	h2{
+		font-size: 2em;
+		font-family: $lato;
+	}
+
+	img{
+		width: 100%;
+		height: auto;
+	}
+}
+
+.tech{
+	background-color: $bgcolor-gray;
+	text-align: center;
+	padding: 50px 0;
+	img{
+		padding-right: 45px;
+		height: 200px;
+		width: auto;
+	}
+}
+
+.video{
+	text-align: center;
+	padding: 50px 0;
+}
+
+.testimonios{
+	background-color: $bgcolor-gray;
+	padding: 25px 0;
+
+	.one-quarter{
+		width: 25%;
+		display: inline-block;
+		vertical-align: top;
+		padding-left: 30px;
+	}
+
+	blockquote{
+		font-family: $gentium, serif;
+
+		> p:first-child{
+			font-style: italic;
+		}
+	}
+}
+
+footer.footer{
+	height: 150px;
+
+	p{
+		margin: 0;
+		padding: 0;
+		padding-top: 65px;
+		font-size: 1.25em;
+		text-align: center;
+	}
+}

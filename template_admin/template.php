@@ -130,13 +130,10 @@
       clientY = event.clientY;
       imgX = img.offsetLeft+15;
       imgY = img.offsetTop+167;
-      alert("La imagen se encuentra en la coordenada: (" + imgX + ", " + imgY + ")");
-      alert("El mouse dio click en: (" + clientX + ", " + clientY + ")");
       offsetX = clientX - imgX;
       offsetY = clientY - imgY;
       document.getElementById("tagX").value = offsetX;
       document.getElementById("tagY").value = offsetY;
-      alert("Total: (" + offsetX + ", " + offsetY + ")");
       offsetX+= 70;
       offsetY+= 40;
 

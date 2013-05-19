@@ -53,6 +53,32 @@
 		          controlsContainer: ".flex-container"
 		    });
 		});
+		$(document).ready(function(){ 
+			$("#formulario").submit(function () { 
+				if($("#email").val().length < 1) {  
+					formulario.email.focus();  
+					$('#valida-email').fadeIn('slow'); 
+					setTimeout(function(){$('#valida-email').fadeOut('slow');},2000); 
+					return false;   
+				}
+				  
+				if($("#email").val().indexOf('@', 0) == -1 || $("#email").val().indexOf('.', 0) == -1) { 
+					formulario.email.focus();   
+					$('#valida-email-valido').fadeIn('slow'); 
+					setTimeout(function(){$('#valida-email-valido').fadeOut('slow');},2000); 
+					return false;   
+				} 
+				
+				if($("#password").val().length < 1) { 
+					formulario.password.focus();   
+					$('#valida-password').fadeIn('slow'); 
+					setTimeout(function(){$('#valida-password').fadeOut('slow');},2000); 
+					return false;   
+				}
+				return true;   
+			}); 
+		});
+
 	</script>
 
   </head>
@@ -84,12 +110,15 @@
 		<div class="hero-unit">
 			<h2>Login</h2>			
 			<br />
-			<form>
-				<label>Usuario: </label><input type="text" name="nombre"><br />
-				<label>Password: </label><input type="password" name="password"><br />
+			<form id="formulario" name="formulario" action="logeado.html">
+				<label>E-mail: </label><input type="text" name="email" id="email">
+				<div id="valida-email" style="display:none; margin-left:5px; float: left" >Debes rellenar el campo <strong>E-mail</strong>.</div>
+				<div id="valida-email-valido" style="margin-left:5px; float:left; display:none">Debes ingresar un <strong>email</strong> valido.</div> <br />
+				<label>Password: </label><input type="password" name="password" id="password">
+				<div id="valida-password" style="display:none; float: left; margin-left: 5px" >Debes rellenar el campo <strong>Password</strong>.</div><br />
 				<br />
 				<br />
-				<button type="submit"><a href= "logeado.html">Login</a></button>
+				<button type="submit" id="envia">Login</button>
 			</form>
 		</div>
 
