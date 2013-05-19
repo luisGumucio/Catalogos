@@ -78,10 +78,6 @@ ul li {
 .subbar ul.subnav li {
   padding-left: 20px;
 }
-/* line 69, ../sass/screen.scss */
-.subbar ul.subnav li:first-child {
-  padding-right: 20px;
-}
 /* line 72, ../sass/screen.scss */
 .subbar ul.subnav li a {
   color: #eee;
