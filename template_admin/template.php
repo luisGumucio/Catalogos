@@ -4,7 +4,7 @@
   if(isset($_POST['submit'])){
     // Create connection
     // $con=mysqli_connect("localhost","root","root","dummy");
-    $con=mysqli_connect("ochonuev","ochonuev","dB147Wmwf5","_dummy");
+    $con=mysqli_connect("localhost","root","","catalogos");
 
     // Check connection
     if (mysqli_connect_errno($con)){
@@ -61,7 +61,7 @@
 			<div class="subbar">
 				<ul class="subnav">
 					<li><a href="#">Crear Tags</a></li>
-					<li><a href="#">Editar Tags</a></li>
+					<li><a href="edit.php">Editar Tags</a></li>
 				</ul>
 			</div>
 		</div><!--

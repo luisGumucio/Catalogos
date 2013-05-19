@@ -1,13 +1,41 @@
+<?php 
+$error = 0;
+
+  if(isset($_POST['submit'])){
+    // Create connection
+    // $con=mysqli_connect("localhost","root","root","dummy");
+    $con=mysqli_connect("localhost","root","","catalogos");
+
+    // Check connection
+    if (mysqli_connect_errno($con)){
+      echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    }
+    $codigo = $_POST[codigo];
+    $descCorta = mysql_real_escape_string($_POST[descCorta]);
+    $descLarga = mysql_real_escape_string($_POST[descLarga]);
+    $precio = $_POST[precio];
+    $promo = $_POST[tienePromocion];
+    $precioReg = $_POST[precioRegular];
+    $tagX = $_POST[tagX];
+    $tagY = $_POST[tagY];
+
+    $sql=mysqli_query($con,"UPDATE Producto SET codigo=$codigo, descripcionCorta=$descCorta, descripcionLarga=$descLarga,precio=$precio, tienePromocion=$promo,
+    	precioRegular=$precioReg Where codigo = 123456789");
+
+    mysqli_close($con);
+
+  }
+?>
 <?php
  	$error = 0;
 
 	// Create connection
 	// mysql_connect("localhost","root","root")
-	mysql_connect("ochonuev","ochonuev","dB147Wmwf5")
+	mysql_connect("localhost","root","","catalogos")
 	or die(mysql_error());
 
 	// mysql_select_db("dummy") or die(mysql_error());
-	mysql_select_db("_dummy") or die(mysql_error());
+	mysql_select_db("catalogos") or die(mysql_error());
 
 	// Check connection
 	if (mysqli_connect_errno($con)){
@@ -16,8 +44,35 @@
 
 	$sql = mysql_query("SELECT posX, posY FROM ProductoTag")
 	or die(mysql_error());
+	$codigo = "Codigo";
+	$descCorta = "Descripción corta";
+	$descLarga = "Descripción Larga";
+	$precio = "Precio";
+	$precioRegular = "Precio regular";
 
+	function recoje_info_tag(){
+		$x = $_COOKIE['x'];
+		$y = $_COOKIE['y'];
+		echo $x;
+		echo ",";
+		echo $y;
+		$con=mysqli_connect("localhost","root","","catalogos");
+			// Check connection
+		if (mysqli_connect_errno())
+		{
+			echo "Failed to connect to MySQL: " . mysqli_connect_error();
+		}
+		$result = mysqli_query($con,"SELECT * FROM Producto");
 
+		$row = mysqli_fetch_array($result);
+		$codigo = $row['codigo'];
+		$descCorta = $row['descripcionCorta'];
+		$descLarga = $row['descripcionLarga'];
+		$precio= $row['precio'];
+		$tienePromocion = $row['tienePromocion'];
+		$precioRegular = $row['precioRegular'];
+		mysqli_close($con);
+	}
 ?>
 <!doctype html>
 <html lang="en">
@@ -29,6 +84,14 @@
 	<title>Admin</title>
 	<link rel="stylesheet" href="stylesheets/screen.css">
 </head>
+<script>
+	function tag(x,y){
+		x =x - 70;
+		y = y - 40;
+		create_cookie(x,y);
+		alert("<?php recoje_info_tag(); ?>");
+	}
+</script>
 <body>
 	<div class="grid">
 		<div class="grid__item one-whole">
@@ -44,7 +107,7 @@
 		<div class="grid__item one-whole">
 			<div class="subbar">
 				<ul class="subnav">
-					<li><a href="#">Crear Tags</a></li>
+					<li><a href="template.php">Crear Tags</a></li>
 					<li><a href="#">Editar Tags</a></li>
 				</ul>
 			</div>
@@ -61,10 +124,9 @@
 				<?php
 					while($tags = mysql_fetch_array($sql)){
 
-						echo "<img src='images/tag.svg' style='width: 1em; height: auto; position: absolute; top: ".(((int)($tags['posY']))+40)."px; left: ".(((int)($tags['posX']))+70)."px;'>";
+						echo "<img src='images/tag.svg' onclick=tag(".(((int)($tags['posX']))+70).",".(((int)($tags['posY']))+40).") style='width: 1em; height: auto; position: absolute; top: ".(((int)($tags['posY']))+40)."px; left: ".(((int)($tags['posX']))+70)."px;'>";
 					}
 
-					mysqli_close($con);
 				?>
 				<div class="pagination">
 					<input class="input-mini" type="text" placeholder="5"><span><h5>/ 100</h5></span>
@@ -91,15 +153,15 @@
 				<fieldset>
 					<legend>Datos de la página</legend>
 					<label for="codigo">Código</label>
-					<input type="text" id="codigo" name="codigo" placeholder="Código"><br>
+					<input type="text" id="codigo" name="codigo" placeholder="<?php echo $codigo; ?>"><br>
 					<label for="descCorta">Descripción Corta</label><br>
-					<textarea name="descCorta" id="descCorta" cols="30" rows="5" placeholder="Descripción Corta"></textarea><br>
+					<textarea name="descCorta" id="descCorta" cols="30" rows="5" placeholder="<?php echo $descCorta; ?>"></textarea><br>
 					<label for="descLarga">Descripción Larga</label><br>
-					<textarea name="descLarga" id="descLarga" cols="30" rows="5" placeholder="Descripción Larga"></textarea><br>
+					<textarea name="descLarga" id="descLarga" cols="30" rows="5" placeholder="<?php echo $descLarga; ?>"></textarea><br>
 					<label for="precio">Precio</label>
-					<input type="text" id="precio" name="precio" placeholder="Precio"><br>
+					<input type="text" id="precio" name="precio" placeholder="<?php echo $precio; ?>"><br>
 					<label for="precioRegular">Precio Regular</label>
-					<input type="text" id="precioRegular" name="precioRegular" placeholder="Precio Regular"><br>
+					<input type="text" id="precioRegular" name="precioRegular" placeholder="<?php echo $precioRegular; ?>"><br>
 					<label for="promocion">Promoción</label>
 					<label class="radio">Si</label>
 					<input type="radio" name="tienePromocion" value="1">
@@ -114,6 +176,14 @@
 			</form>
 		</div>
 	</div>
+	<script src="../js/jquery.js"></script>
+	<script src="../js/cookie.js"></script>
+	<script>
+		function create_cookie(a,b){
+			$.cookie("x",a);
+			$.cookie("y",b);
+		}
+	</script>
 	<script>
     function getOffsets(){
       img = document.getElementById("foto");
