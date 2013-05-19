@@ -11,6 +11,7 @@
     <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
     <link href="css/catalogos.css" rel="stylesheet">
     <link href="css/lightbox.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
     
     <!--Javascript-->
     <script src="js/jquery.js"></script>
@@ -27,6 +28,52 @@
     <script src="js/bootstrap-carousel.js"></script>
     <script src="js/bootstrap-typeahead.js"></script>
     <script src="js/lightbox.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    
+    <script>
+    	$(function() {
+	    	$( "#dialog" ).dialog({
+		    	resizable: false,
+		    	autoOpen: false,
+		    	modal: true,
+		    	buttons: {
+			    	"Ok": function() {
+				    	$( this ).dialog( "close" );
+				    },
+				    Cancel: function() {
+					    $( this ).dialog( "close" );
+					}
+				}
+			});
+			$('body').keydown(function(event) {
+				if (event.which == 83) {
+					$('#opener').click(); 
+				}
+			});
+
+			$( "#opener" ).click(function() {
+				$( "#dialog" ).dialog( "open" );
+			});
+		});
+	</script>
+	<style>
+      body {
+        padding-top: 60px; 
+      }
+      .ui-dialog{
+	      z-index: 10003;
+	      
+	      
+	      
+      }
+      .ui-widget-overlay{
+	      z-index: 10002;
+	      
+      }
+    </style>
+
+    
+    
   </head>
   <body>
     <div class="topbar">
@@ -86,6 +133,13 @@
       <img src="img/img011.jpg" alt="">
       <img src="img/img014.jpg" alt="">
     </div>
+    
+    <div id="dialog" style="width:500px" title="Carrito">
+    	Se agregó al carrito exitosamente
+    	El articulo: Bolsa Guess <br />
+    	Precio: $3,000
+    </div>
+    <input type="button" value="Abrir" id="opener" style="display:none" /> 
 
   </body>
 </html>
