@@ -1,0 +1,87 @@
+@import url(normalize.css);
+@import url(csswizardry-grid.css);
+@import url(bootstrap.min.css);
+/* line 3, ../sass/catalogo.scss */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* line 8, ../sass/catalogo.scss */
+label {
+  display: inline;
+  padding-right: 20px;
+}
+
+/* line 13, ../sass/catalogo.scss */
+textarea {
+  margin-top: 10px;
+}
+
+/* line 17, ../sass/catalogo.scss */
+ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 20, ../sass/catalogo.scss */
+ul li {
+  list-style: none;
+  float: left;
+}
+
+/* line 30, ../sass/catalogo.scss */
+.mainbar {
+  height: 62px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding-left: 20px;
+}
+/* line 35, ../sass/catalogo.scss */
+.mainbar ul {
+  padding-top: 21px;
+}
+/* line 37, ../sass/catalogo.scss */
+.mainbar ul li {
+  padding-right: 30px;
+}
+/* line 40, ../sass/catalogo.scss */
+.mainbar ul li:first-child a {
+  font-size: 1.6em;
+}
+/* line 44, ../sass/catalogo.scss */
+.mainbar ul li a {
+  font-size: 1.4em;
+  text-transform: uppercase;
+}
+/* line 48, ../sass/catalogo.scss */
+.mainbar ul li:last-child {
+  padding-left: 270px;
+}
+/* line 50, ../sass/catalogo.scss */
+.mainbar ul li:last-child a {
+  text-transform: none;
+}
+/* line 52, ../sass/catalogo.scss */
+.mainbar ul li:last-child a span {
+  border-bottom: 1px dotted #000;
+}
+
+/* line 61, ../sass/catalogo.scss */
+.nine-tenths {
+  padding-top: 30px;
+}
+/* line 64, ../sass/catalogo.scss */
+.nine-tenths .add {
+  font-size: 33.5em;
+  line-height: 210px;
+  height: 300px;
+  width: 300px;
+  display: inline-block;
+  overflow: hidden;
+  text-align: left;
+  padding-right: 20px;
+}
+/* line 74, ../sass/catalogo.scss */
+.nine-tenths img {
+  width: auto;
+  height: 300px;
+}
