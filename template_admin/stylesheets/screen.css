@@ -133,3 +133,7 @@ ul li {
 .one-third .btn {
   margin-top: 10px;
 }
+/* line 124, ../sass/screen.scss */
+.one-third .tag {
+  display: none;
+}
