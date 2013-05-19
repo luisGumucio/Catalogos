@@ -30,6 +30,7 @@
     <script src="js/lightbox.js"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     
+    <!-- Metodo para que salgan los pop-up para agregar un articulo al carrito -->
     <script>
     	$(function() {
 	    	$( "#dialog" ).dialog({
@@ -56,6 +57,8 @@
 			});
 		});
 	</script>
+	
+	<!-- Estilo usado para que el pop-up salga arriba del ligth-box  -->
 	<style>
       body {
         padding-top: 60px; 
@@ -92,7 +95,7 @@
               <li><a href="#"><span class="white">Contacto</span></a></li>
             </ul>
             <ul class="nav pull-right">
-              <li><a href="#"><span class="white">Login</span></a></li>
+              <li><a href="login.html"><span class="white">Login</span></a></li>
               <li><a href="signup.html"><span class="white">Sign Up</span></a></li>
             </ul>
           </div><!-- end nav-collapse -->
@@ -134,6 +137,7 @@
       <img src="img/img014.jpg" alt="">
     </div>
     
+    <!-- Div necesario para decirle al pop-up lo que va a decir -->
     <div id="dialog" style="width:500px" title="Carrito">
     	Se agregó al carrito exitosamente
     	El articulo: Bolsa Guess <br />

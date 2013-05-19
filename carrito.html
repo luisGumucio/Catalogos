@@ -54,6 +54,7 @@
 		    });
 		});
 		
+		//Funcion para borrar una linea de la tabla de carrito y restar el precio del articulo al total
 		function SomeDeleteRowFunction(btndel,price) {
 			if (typeof(btndel) == "object") {
 				var total = $('#total').html();
@@ -68,6 +69,8 @@
 				}
 		}
 		
+		
+		//Funcion para calcular el precio del articulo de acuerdo a su cantidad requerida
 		$(function() {
 			$('#idcantidadnano').change (function (){
 				$('#idsubtotalnano').html("$" + ($('#idcantidadnano').val() * 99.99).toFixed(2));
@@ -75,17 +78,17 @@
 				precioiphone = precioiphone.substr(1);
 				var precionano = $('#idsubtotalnano').html()
 				precionano = precionano.substr(1);
-				$('#total').html("$" + (precioiphone*1+precionano*1));
+				$('#total').html("$" + (precioiphone*1+precionano*1).toFixed(2));
 
 			});
 			
 			$('#idcantidadiphone').change (function (){
-				$('#idsubtotaliphone').html("$" + ($('#idcantidadiphone').val() * 399.99).toFixed(2));
+				$('#idsubtotaliphone').html("$" + ($('#idcantidadiphone').val() * 2999.99).toFixed(2));
 				var precioiphone = $('#idsubtotaliphone').html()
 				precioiphone = precioiphone.substr(1);
 				var precionano = $('#idsubtotalnano').html()
 				precionano = precionano.substr(1);
-				$('#total').html("$" + (precioiphone*1+precionano*1));
+				$('#total').html("$" + (precioiphone*1+precionano*1).toFixed(2));
 
 			});
      	});
@@ -139,15 +142,15 @@
 					<td><input type="button" value="Eliminar" onclick="SomeDeleteRowFunction(this,99.99);"></td>
 				</tr>
 				<tr>
-					<td>iPhone 5 16GB</td>
-					<td id="idprecioiphone">$399.99</td>
+					<td>Bolsa Guess</td>
+					<td id="idprecioiphone">$2999.99</td>
 					<td><input type="text" name="cantidad" class="cantidad" id="idcantidadiphone"></td>
-					<td id="idsubtotaliphone">$399.99</td>
-					<td><input type="button" value="Eliminar" onclick="SomeDeleteRowFunction(this,399.99);"></td>
+					<td id="idsubtotaliphone">$2999.99</td>
+					<td><input type="button" value="Eliminar" onclick="SomeDeleteRowFunction(this,2999.99);"></td>
 				</tr>
 				<tr>
 					<td colspan="4">Total</td>
-					<td id="total">$499.98</td>
+					<td id="total">$3099.98</td>
 				</tr>
 			</table>
 			
