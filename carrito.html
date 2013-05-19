@@ -54,9 +54,14 @@
 		    });
 		});
 		
-		function SomeDeleteRowFunction(btndel) {
+		function SomeDeleteRowFunction(btndel,price) {
 			if (typeof(btndel) == "object") {
+				var total = $('#total').html();
+				total = total.substr(1);
+				total = (total*1 - price*1);
+				$('#total').html("$" + total.toFixed(2));
 				$(btndel).closest("tr").remove();
+				
 			} 
 			else {
 				return false;
@@ -65,7 +70,7 @@
 		
 		$(function() {
 			$('#idcantidadnano').change (function (){
-				$('#idsubtotalnano').html("$" + $('#idcantidadnano').val() * 99.99);
+				$('#idsubtotalnano').html("$" + ($('#idcantidadnano').val() * 99.99).toFixed(2));
 				var precioiphone = $('#idsubtotaliphone').html()
 				precioiphone = precioiphone.substr(1);
 				var precionano = $('#idsubtotalnano').html()
@@ -75,7 +80,7 @@
 			});
 			
 			$('#idcantidadiphone').change (function (){
-				$('#idsubtotaliphone').html("$" + $('#idcantidadiphone').val() * 399.99);
+				$('#idsubtotaliphone').html("$" + ($('#idcantidadiphone').val() * 399.99).toFixed(2));
 				var precioiphone = $('#idsubtotaliphone').html()
 				precioiphone = precioiphone.substr(1);
 				var precionano = $('#idsubtotalnano').html()
@@ -131,18 +136,18 @@
 					<td id="idprecionano">$99.99</td>
 					<td><input type="text" name="cantidad" class="cantidad" id="idcantidadnano"></td>
 					<td id="idsubtotalnano">$99.99</td>
-					<td><input type="button" value="Eliminar" onclick="SomeDeleteRowFunction(this);"></td>
+					<td><input type="button" value="Eliminar" onclick="SomeDeleteRowFunction(this,99.99);"></td>
 				</tr>
 				<tr>
 					<td>iPhone 5 16GB</td>
 					<td id="idprecioiphone">$399.99</td>
 					<td><input type="text" name="cantidad" class="cantidad" id="idcantidadiphone"></td>
-					<td id="idsubtotaliphone">$399.98</td>
-					<td><input type="button" value="Eliminar" onclick="SomeDeleteRowFunction(this);"></td>
+					<td id="idsubtotaliphone">$399.99</td>
+					<td><input type="button" value="Eliminar" onclick="SomeDeleteRowFunction(this,399.99);"></td>
 				</tr>
 				<tr>
 					<td colspan="4">Total</td>
-					<td id="total">$799.98</td>
+					<td id="total">$499.98</td>
 				</tr>
 			</table>
 			
