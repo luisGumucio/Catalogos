@@ -17,13 +17,8 @@
     <!-- Slider -->
     <link rel="stylesheet" href="css/flexslider.css" type="text/css">
     
-    <style>
-      body {
-        padding-top: 60px; 
-      }
-    </style>
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
-
+        <link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -31,6 +26,8 @@
     
     <!-- Javascript-->
     <script src="js/jquery.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    
     <script src="js/bootstrap-transition.js"></script>
     <script src="js/bootstrap-alert.js"></script>
     <script src="js/bootstrap-modal.js"></script>
@@ -54,7 +51,52 @@
 		          controlsContainer: ".flex-container"
 		    });
 		});
+
+  $(function() {
+    $( "#dialog" ).dialog({
+      resizable: false,
+autoOpen: false,
+      modal: true,
+      buttons: {
+        "Ok": function() {
+          $( this ).dialog( "close" );
+        },
+        Cancel: function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+    $('body').keydown(function(event) {
+  if (event.which == 83) {
+    $('#opener').click(); 
+   }
+   
+});
+
+
+ 
+    $( "#opener" ).click(function() {
+      $( "#dialog" ).dialog( "open" );
+    });
+    });
+
 	</script>
+	<style>
+      body {
+        padding-top: 60px; 
+      }
+      .ui-dialog{
+	      z-index: 10003;
+	      
+	      
+	      
+      }
+      .ui-widget-overlay{
+	      z-index: 10002;
+	      
+      }
+    </style>
+
 
   </head>
 
@@ -76,7 +118,7 @@
           		<li><a href="#"><span class="white">Contacto</span></a></li>
           	</ul>
             <ul class="nav pull-right">
-              <li><a href="#"><span class="white">Login</span></a></li>
+              <li><a href="login.html"><span class="white">Login</span></a></li>
               <li><a href="signup.html"><span class="white">Sign Up</span></a></li>
             </ul>
           </div><!-- end nav-collapse -->
@@ -120,6 +162,13 @@
 	
 		</div>
     </div> <!-- /container -->
+    <div id="dialog" style="width:500px" title="Carrito">
+    	Se agregó al carrito exitosamente
+    	El articulo: Bolsa Guess <br />
+    	Precio: $3,000
+    </div>
+    <input type="button" value="Abrir" id="opener" style="display:none" /> 
+    
     
     <script type="text/javascript">
 		$("#fittext1").fitText();
