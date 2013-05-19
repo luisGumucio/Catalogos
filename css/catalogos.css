@@ -7,6 +7,10 @@ a:hover{
 	height: 30px;
 }
 
+.navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner{
+	padding: 0 55px;
+}
+
 .container{
 	margin: 0;
 	width: 100%;
