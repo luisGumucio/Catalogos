@@ -68,7 +68,7 @@
 			<div class="subbar">
 				<ul class="subnav">
 					<li><a href="#">Crear Tags</a></li>
-					<li><a href="edit.php">Editar Tags</a></li>
+					<li><a href="#">Editar Tags</a></li>
 				</ul>
 			</div>
 		</div><!--
