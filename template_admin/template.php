@@ -3,8 +3,8 @@
 
   if(isset($_POST['submit'])){
     // Create connection
-    // $con=mysqli_connect("localhost","root","root","dummy");
-    $con=mysqli_connect("localhost","root","","catalogos");
+    $con=mysqli_connect("localhost","root","root","dummy");
+    // $con=mysqli_connect("ochonuev","ochonuev","dB147Wmwf5","_dummy");
 
     // Check connection
     if (mysqli_connect_errno($con)){
@@ -23,6 +23,7 @@
     $sql="INSERT INTO Producto (codigo, descripcionCorta, descripcionLarga, precio, tienePromocion,
     	precioRegular) VALUES ('$codigo', '$descCorta', '$descLarga', '$precio', '$promo', '$precioReg')";
 
+
 	$sql2="INSERT INTO ProductoTag (posX, posY) VALUES ('$tagX', '$tagY')";
 
     if (!mysqli_query($con,$sql) || !mysqli_query($con,$sql2)){
@@ -32,6 +33,12 @@
     }
 
     mysqli_close($con);
+
+    $dbh=mysql_connect ("localhost", "root", "root") or die ('problema conectando porque :' . mysql_error());
+	mysql_select_db ("dummy",$dbh);
+	$sql3="UPDATE ProductoTag SET idProducto = idProductoTag";
+	mysql_query($sql3, $dbh) or die ("problema con query");
+
 
   }
 ?>
