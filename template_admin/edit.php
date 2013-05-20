@@ -2,6 +2,7 @@
 	require_once('PhpConsole.php');
 	PhpConsole::start();
 
+	//Variables globales
  	$error = 0;
  	$ajaxx = 0;
  	$codigo = "";
@@ -14,12 +15,13 @@
 	// Create connection
 	mysql_connect("localhost","root","root") or die(mysql_error());
 	// mysql_connect("ochonuev","ochonuev","dB147Wmwf5") or die(mysql_error());
-
 	mysql_select_db("dummy") or die(mysql_error());
 	// mysql_select_db("_dummy") or die(mysql_error());
 
+	//Obtención de coordenadas de tags
 	$sql = mysql_query("SELECT posX, posY FROM ProductoTag") or die(mysql_error());
 
+	//Obtener info del Tag dependiendo el click del tag
 	if(isset($_POST['ajax'])){
 		$x = $_COOKIE['x'];
 		$y = $_COOKIE['y'];
@@ -37,6 +39,7 @@
 		$precioReg = $res[5];
 		$promo = $res[6];
 
+		//Cookie sets
 		setcookie("id",$id);
 		setcookie("codigo",$codigo);
 		setcookie("descCorta",$descCorta);
@@ -46,6 +49,7 @@
 		setcookie("promo",$promo);
 	}
 
+	//Update de información de cierto tag
 	if(isset($_POST['submit'])){
 	    $dbh=mysql_connect ("localhost", "root", "root") or die ('problema conectando porque :' . mysql_error());
 		mysql_select_db ("dummy",$dbh);
@@ -69,6 +73,7 @@
 	    }
  	}
 
+ 	//Eliminar información y tag
  	if(isset($_POST['delete'])){
 	    $dbh=mysql_connect ("localhost", "root", "root") or die ('problema conectando porque :' . mysql_error());
 		mysql_select_db ("dummy",$dbh);
@@ -183,6 +188,7 @@
 	<script src="../js/jquery.js"></script>
 	<script src="../js/cookie.js"></script>
 	<script>
+		//Obtención de coordenadas del tag
 		function coords(x,y){
 			$.cookie("x",x);
 			$.cookie("y",y);

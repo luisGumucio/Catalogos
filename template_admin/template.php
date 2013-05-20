@@ -5,12 +5,12 @@
     // Create connection
     $con=mysqli_connect("localhost","root","root","dummy");
     // $con=mysqli_connect("ochonuev","ochonuev","dB147Wmwf5","_dummy");
-
     // Check connection
     if (mysqli_connect_errno($con)){
       echo "Failed to connect to MySQL: " . mysqli_connect_error();
     }
 
+    //Variables
     $codigo = $_POST[codigo];
     $descCorta = mysql_real_escape_string($_POST[descCorta]);
     $descLarga = mysql_real_escape_string($_POST[descLarga]);
@@ -20,10 +20,11 @@
     $tagX = $_POST[tagX];
     $tagY = $_POST[tagY];
 
+    //Insert
     $sql="INSERT INTO Producto (codigo, descripcionCorta, descripcionLarga, precio, tienePromocion,
     	precioRegular) VALUES ('$codigo', '$descCorta', '$descLarga', '$precio', '$promo', '$precioReg')";
 
-
+	//Insert de coordenadas de Tag
 	$sql2="INSERT INTO ProductoTag (posX, posY) VALUES ('$tagX', '$tagY')";
 
     if (!mysqli_query($con,$sql) || !mysqli_query($con,$sql2)){
@@ -34,6 +35,7 @@
 
     mysqli_close($con);
 
+    //Actualización de idProducto en ProductoTag
     $dbh=mysql_connect ("localhost", "root", "root") or die ('problema conectando porque :' . mysql_error());
 	mysql_select_db ("dummy",$dbh);
 	$sql3="UPDATE ProductoTag SET idProducto = idProductoTag";
@@ -130,6 +132,7 @@
 		</div>
 	</div>
 	<script>
+	//Creación de tag y localización de coordenadas
     function getOffsets(){
       img = document.getElementById("foto");
       parent = img.parentNode;
