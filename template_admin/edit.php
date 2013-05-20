@@ -100,9 +100,9 @@
 		<div class="grid__item one-whole">
 			<header class="mainbar">
 				<ul>
-					<li><a href="#">Catálogo Administrador</a></li>
-					<li><a href="#">Catálogos</a></li>
-					<li><a href="#">Tags</a></li>
+					<li><a href="intro.html">Catálogo Administrador</a></li>
+					<li><a href="catalogo.html">Catálogos</a></li>
+					<li><a href="template.php">Tags</a></li>
 					<li><a href="#">En sesión como <span>Administrador</span></a></li>
 				</ul>
 			</header>
@@ -110,8 +110,8 @@
 		<div class="grid__item one-whole">
 			<div class="subbar">
 				<ul class="subnav">
-					<li><a href="#">Crear Tags</a></li>
-					<li><a href="#">Editar Tags</a></li>
+					<li><a href="template.php">Crear Tags</a></li>
+					<li><a href="edit.php">Editar Tags</a></li>
 				</ul>
 			</div>
 		</div><!--
@@ -174,7 +174,7 @@
 					<input type="text" id="tagX" name="tagX" class="tag">
 					<input type="text" id="tagY" name="tagY" class="tag">
 					<input type="submit" name="submit" id="button" class="btn btn-primary" value="Actualizar">
-					<button class="btn" type="button">Limpiar</button>
+					<button class="btn" type="button" onclick="this.form.reset();">Limpiar</button>
 					<input type="submit" name="delete" id="delete" class="btn" value="Eliminar"></button>
 				</fieldset>
 			</form>
